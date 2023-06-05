@@ -10,7 +10,7 @@ import lombok.ToString;
 @Getter
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class MessageHeaderDTO {
+public class MessageHeader {
     private String msgPrcsRsltCd;
     private int msgDataSubRpttCnt;
     private String msgEtc;
@@ -21,7 +21,7 @@ public class MessageHeaderDTO {
     @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
     public class MsgDataSub {
         private String msgIndcCd;
+        private String msgCd;
+        private String msgCtns;
     }
-
-
 }
