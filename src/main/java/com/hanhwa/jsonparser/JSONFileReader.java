@@ -1,4 +1,4 @@
-package com.example;
+package com.hanhwa.jsonparser;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

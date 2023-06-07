@@ -1,4 +1,4 @@
-package com.example;
+package com.hanhwa.jsonparser;
 
 public class JSONParser {
     public void jsonParsing(String jsonFilePath, JSONFileReader jsonFileReader, ObjectBinder objectBinder){

@@ -1,4 +1,4 @@
-package com.example;
+package com.hanhwa.jsonparser;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
