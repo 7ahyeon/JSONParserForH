@@ -4,7 +4,6 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 public class JSONFileReader {
-    private String jsonFileContent;
 
     public String readFile(String jsonFilePath) throws FileNotFoundException, UnsupportedEncodingException, IOException {
         if (isExistedFile(jsonFilePath)){
@@ -22,8 +21,7 @@ public class JSONFileReader {
                 sb.append(jsonFileContentLine);
             }
             br.close();
-            jsonFileContent = sb.toString();
-            return jsonFileContent;
+            return sb.toString();
         } else {
             return null;
         }
