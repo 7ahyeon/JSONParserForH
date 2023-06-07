@@ -1,7 +1,6 @@
 package com.hanhwa.jsonparser.dto;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -14,7 +13,6 @@ public class RsrvCalRq {
 
     @Getter
     @NoArgsConstructor
-    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
     private class Ds_Search {
         private String custNo;
         private String contNo;
