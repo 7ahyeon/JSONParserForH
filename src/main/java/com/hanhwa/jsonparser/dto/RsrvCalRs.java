@@ -1,7 +1,5 @@
 package com.hanhwa.jsonparser.dto;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -15,7 +13,6 @@ public class RsrvCalRs {
 
     @Getter
     @NoArgsConstructor
-    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
     private class Ds_Result {
         private String procDs;
         private String locCd;
@@ -25,7 +22,6 @@ public class RsrvCalRs {
 
     @Getter
     @NoArgsConstructor
-    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
     private class Ds_RoomStatus {
         private String msg;
         private String roomTypeCd;

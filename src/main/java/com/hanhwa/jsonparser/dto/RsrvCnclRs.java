@@ -1,20 +1,21 @@
 package com.hanhwa.jsonparser.dto;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.util.List;
 
 @ToString
 @Getter
 @NoArgsConstructor
 public class RsrvCnclRs {
-    private Ds_PrcsResult dsPrcsResult;
+    private class data {
+        private List<Ds_PrcsResult> ds_procsResult;
+    }
 
     @Getter
     @NoArgsConstructor
-    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
     private class Ds_PrcsResult {
         private String procDs;
         private String procCd;

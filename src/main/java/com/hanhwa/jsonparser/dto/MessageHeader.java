@@ -1,7 +1,5 @@
 package com.hanhwa.jsonparser.dto;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -9,7 +7,6 @@ import lombok.ToString;
 @ToString
 @Getter
 @NoArgsConstructor
-@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class MessageHeader {
     private String msgPrcsRsltCd;
     private int msgDataSubRpttCnt;
@@ -18,7 +15,6 @@ public class MessageHeader {
 
     @Getter
     @NoArgsConstructor
-    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
     public class MsgDataSub {
         private String msgIndcCd;
         private String msgCd;

@@ -2,13 +2,20 @@ package com.hanhwa.jsonparser.program;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class JSONFileReader {
 
     public String readFile(String jsonFileName) throws FileNotFoundException, UnsupportedEncodingException, IOException {
-        if (isExistedFile(jsonFileName)){
+        Path curPath = Paths.get("");
+        String path = curPath.toAbsolutePath().toString();
+        String jsonFilePath = path + "\\file\\" + jsonFileName;
+        System.out.println(jsonFilePath);
+        File file = new File(jsonFilePath);
+
+        if (file.isFile()){
             // jsonFilePath = 파일 경로 + '/' + 파일 이름
-            File file = new File("./file/" + jsonFileName);
             FileInputStream fis = new FileInputStream(file);
             InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
             BufferedReader br = new BufferedReader(isr);
@@ -21,6 +28,7 @@ public class JSONFileReader {
                 sb.append(jsonFileContentLine);
             }
             br.close();
+            System.out.println(sb.toString());
             return sb.toString();
         } else {
             return null;
