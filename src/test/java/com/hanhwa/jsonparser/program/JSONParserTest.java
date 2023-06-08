@@ -24,7 +24,14 @@ class JSONParserTest {
         final JSONParser jsonParser = new JSONParser();
         final JSONFileReader jsonFileReader = new JSONFileReader();
         final ObjectBinder objectBinder = new ObjectBinder();
-        final String jsonFileName = "RsrvReqRq.json";
+//        final String jsonFileName = "RsrvReqRq.json";
+//        final String jsonFileName = "RsrvReqRs.json";
+//        final String jsonFileName = "RsrvModRq.json";
+//        final String jsonFileName = "RsrvModRs.json";
+//        final String jsonFileName = "RsrvCnclRq.json";
+//        final String jsonFileName = "RsrvCnclRs.json";
+//        final String jsonFileName = "RsrvCalRq.json";
+        final String jsonFileName = "RsrvCalRs.json";
 
 
         // when (실행)

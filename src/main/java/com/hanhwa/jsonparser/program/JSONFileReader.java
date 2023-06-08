@@ -28,7 +28,6 @@ public class JSONFileReader {
                 sb.append(jsonFileContentLine);
             }
             br.close();
-            System.out.println(sb.toString());
             return sb.toString();
         } else {
             return null;

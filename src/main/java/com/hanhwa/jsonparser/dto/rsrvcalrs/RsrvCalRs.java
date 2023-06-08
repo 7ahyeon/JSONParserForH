@@ -11,13 +11,13 @@ import java.util.List;
 public class RsrvCalRs {
     @SerializedName("ds_result")
     private List<DsResult> dsResult;
-    private List<DsRoomStatus> dsRoomStatuse;
+    private List<DsRoomStatus> dsRoomStatus;
 
     @Override
     public String toString() {
         return "기간 조회(응답) {" +
                 dsResult +
-                ", " + dsRoomStatuse +
+                ", " + dsRoomStatus +
                 '}';
     }
 }

@@ -1,7 +1,6 @@
 package com.hanhwa.jsonparser.dto.rsrvmodrq;
 
 import com.google.gson.annotations.SerializedName;
-import com.hanhwa.jsonparser.dto.rsrvreqrq.DsRsrvinfo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

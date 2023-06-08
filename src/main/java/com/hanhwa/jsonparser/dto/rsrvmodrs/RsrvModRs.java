@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class RsrvReqRs {
+public class RsrvModRs {
     @SerializedName("ds_prcsResults")
     private List<DsPrcsResult> dsPrcsResults;
 
