@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.dto.rsrvreqrq;
+package com.hanhwa.jsonparser.dto.rsrvcalrq;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
@@ -8,14 +8,14 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class RsrvReqRq {
-    @SerializedName("ds_rsrvInfo")
-    private List<DsRsrvInfo> dsRsrvinfo;
+public class RsrvCalRq {
+    @SerializedName("ds_search")
+    private List<DsSearch> dsSearch;
 
     @Override
     public String toString() {
-        return "예약 요청(요청) {" +
-                dsRsrvinfo +
+        return "기간 조회(요청) {" +
+                dsSearch +
                 '}';
     }
 }

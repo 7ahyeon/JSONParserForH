@@ -2,13 +2,11 @@ package com.hanhwa.jsonparser.dto.rsrvreqrq;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @ToString
 @Data
-public class DsRsrvinfo {
+public class DsRsrvInfo {
 
     @SerializedName("CUST_NO")
     private String custNo;

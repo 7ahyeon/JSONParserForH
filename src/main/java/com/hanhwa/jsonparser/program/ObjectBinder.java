@@ -1,10 +1,11 @@
 package com.hanhwa.jsonparser.program;
 
-import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.hanhwa.jsonparser.dto.*;
+import com.hanhwa.jsonparser.dto.rsrvmodrq.DsRsrvInfo;
 import com.hanhwa.jsonparser.dto.rsrvreqrq.RsrvReqRq;
+import com.hanhwa.jsonparser.dto.rsrvreqrs.DsPrcsResult;
 
 public class ObjectBinder {
     public void bindingObject(String jsonFileContent, String jsonFileName){
@@ -22,7 +23,7 @@ public class ObjectBinder {
                 System.out.println(rsrvReqRq.toString());
                 break;
             case "RsrvReqRs":
-                RsrvReqRs rsrvReqRs = gson.fromJson(jsonFileContent, RsrvReqRs.class);
+                DsPrcsResult rsrvReqRs = gson.fromJson(jsonFileContent, DsPrcsResult.class);
                 rsrvReqRs.toString();
                 break;
             case "RsrvCnclRq":
@@ -34,8 +35,8 @@ public class ObjectBinder {
                 rsrvCnclRs.toString();
                 break;
             case "RsrvModRq":
-                RsrvModRq rsrvModRq = gson.fromJson(jsonFileContent, RsrvModRq.class);
-                rsrvModRq.toString();
+                DsRsrvInfo dsRsrvinfo = gson.fromJson(jsonFileContent, DsRsrvInfo.class);
+                dsRsrvinfo.toString();
                 break;
             case "RsrvModRs":
                 RsrvModRs rsrvModRs = gson.fromJson(jsonFileContent, RsrvModRs.class);
