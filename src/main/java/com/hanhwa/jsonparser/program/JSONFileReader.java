@@ -7,13 +7,11 @@ import java.nio.file.Paths;
 
 public class JSONFileReader {
 
-    public String readFile(String jsonFileName) throws FileNotFoundException, UnsupportedEncodingException, IOException {
-
+    public String readFile(String jsonFilePath) throws FileNotFoundException, UnsupportedEncodingException, IOException {
         // RP! ClassLoader 경로 이용 방법 다시 찾아볼 것
-        Path curPath = Paths.get("");
-        String path = curPath.toAbsolutePath().toString();
-        String jsonFilePath = path + "/src/main/resources/file/" + jsonFileName;
-        System.out.println(jsonFilePath);
+//        ClassLoader classLoader = JSONFileReader.class.getClassLoader();
+//        File file = new File(classLoader.getResource("/file/" + jsonFileName).getFile());
+
         File file = new File(jsonFilePath);
 
         if (file.isFile()){
@@ -34,9 +32,4 @@ public class JSONFileReader {
             return null;
         }
     }
-    private boolean isExistedFile(String jsonFileName) {
-        File file = new File("./file/" + jsonFileName);
-        return file.exists();
-    }
-
 }

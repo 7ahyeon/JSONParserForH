@@ -12,7 +12,9 @@ import java.util.List;
 @NoArgsConstructor
 public class RsrvRs { // 한화 리조트에서의 예약 관련 응답
     @SerializedName("ds_prcsResults")
-    private List<RsrvInfo> rsrvInfoList;
+    private List<RsrvInfo> rsrvInfoList1;
+    @SerializedName("ds_prcsResult")
+    private List<RsrvInfo> rsrvInfoList2;
     @SerializedName("ds_roomStatus")
     private List<RsrvRoomInfo> rsrvRoomInfoList;
 }

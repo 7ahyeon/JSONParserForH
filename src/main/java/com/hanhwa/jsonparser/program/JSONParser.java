@@ -3,7 +3,15 @@ package com.hanhwa.jsonparser.program;
 import java.io.IOException;
 
 public class JSONParser {
-    public static void jsonParsing(String jsonFileName, JSONFileReader jsonFileReader, ObjectBinder objectBinder){
+    private static final JSONFileReader jsonFileReader = new JSONFileReader();
+    private static final ObjectBinder objectBinder = new ObjectBinder();
+
+//    public JSONParser(JSONFileReader jsonFileReader, ObjectBinder objectBinder) {
+//        this.jsonFileReader = jsonFileReader;
+//        this.objectBinder = objectBinder;
+//    }
+
+    public static void jsonParsing(String jsonFileName){
         String jsonFileContent = null;
         try {
             jsonFileContent = jsonFileReader.readFile(jsonFileName);

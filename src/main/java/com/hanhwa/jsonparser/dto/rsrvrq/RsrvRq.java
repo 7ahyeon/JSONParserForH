@@ -11,6 +11,10 @@ import java.util.List;
 @NoArgsConstructor
 public class RsrvRq { // 한화 리조트로의 예약 관련 요청
     @SerializedName("ds_rsrvInfo")
-    private List<RsrvInfo> rsrvInfoList;
+    private List<RsrvInfo> rsrvInfoList1;
+    @SerializedName("ds_search")
+    private List<RsrvInfo> rsrvInfoList2;
+    @SerializedName("ds_cnclInfo")
+    private List<RsrvInfo> rsrvInfoList3;
 
 }
