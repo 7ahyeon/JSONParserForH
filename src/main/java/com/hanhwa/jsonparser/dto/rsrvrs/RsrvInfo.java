@@ -1,18 +1,24 @@
-package com.hanhwa.jsonparser.dto.rsrvcnclrs;
+package com.hanhwa.jsonparser.dto.rsrvrs;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.Data;
+import lombok.Getter;
 import lombok.ToString;
-
+// Spring : JsonInclude(JsonInclude.Include.NON_NULL) : null값 제외 처리 가능
 @ToString
-@Data
-public class DsPrcsResult {
+@Getter
+public class RsrvInfo {
     @SerializedName("PROC_DS")
     private String procDs;
     @SerializedName("PROC_CD")
     private String procCd;
     @SerializedName("CUST_NO")
     private String custNo;
+    @SerializedName("MEMB_NO")
+    private String membNo;
+    @SerializedName("RSRV_NO")
+    private String rsrvNo;
+    @SerializedName("ROOM_RATE")
+    private String roomRate;
     @SerializedName("LOC_CD")
     private String locCd;
     @SerializedName("ARRV_DATE")
@@ -41,4 +47,8 @@ public class DsPrcsResult {
     private String rsrvDate;
     @SerializedName("CUST_IDNT_NO")
     private String custIdntNo;
+    @SerializedName("STRT_DATE")
+    private String strtDate;
+    @SerializedName("END_DATE")
+    private String endDate;
 }

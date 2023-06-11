@@ -1,8 +1,4 @@
 package com.hanhwa.jsonparser.program;
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.hanhwa.jsonparser.dto.rsrvreqrq.RsrvReqRq;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

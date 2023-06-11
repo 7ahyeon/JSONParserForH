@@ -1,19 +1,20 @@
-package com.hanhwa.jsonparser.dto.rsrvreqrq;
+package com.hanhwa.jsonparser.dto.rsrvrq;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.Data;
+import lombok.Getter;
 import lombok.ToString;
-
+// Spring : JsonInclude(JsonInclude.Include.NON_NULL) : null값 제외 처리 가능
 @ToString
-@Data
-public class DsRsrvInfo {
-
+@Getter
+public class RsrvInfo { // 한화 리조트로의 예약 요청 정보
     @SerializedName("CUST_NO")
     private String custNo;
     @SerializedName("MEMB_NO")
     private String membNo;
     @SerializedName("CUST_IDNT_NO")
     private String custIdntNo;
+    @SerializedName("RSRV_NO")
+    private String rsrvNo;
     @SerializedName("CONT_NO")
     private String contNo;
     @SerializedName("PAKG_NO")
@@ -50,4 +51,8 @@ public class DsRsrvInfo {
     private String rsrvCustTelNo4;
     @SerializedName("REFRESH_YN")
     private String refreshYn;
+    @SerializedName("STRT_DATE")
+    private String strtDate;
+    @SerializedName("END_DATE")
+    private String endDate;
 }

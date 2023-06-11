@@ -1,12 +1,12 @@
-package com.hanhwa.jsonparser.dto.rsrvcalrs;
+package com.hanhwa.jsonparser.dto.rsrvrs;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.Data;
+import lombok.Getter;
 import lombok.ToString;
-
+// Spring : JsonInclude(JsonInclude.Include.NON_NULL) : null값 제외 처리 가능
 @ToString
-@Data
-public class DsRoomStatus {
+@Getter
+public class RsrvRoomInfo {
     @SerializedName("MSG")
     private String msg;
     @SerializedName("ROOM_TYPE_CD")

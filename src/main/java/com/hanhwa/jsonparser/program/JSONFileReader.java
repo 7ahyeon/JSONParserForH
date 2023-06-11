@@ -8,14 +8,15 @@ import java.nio.file.Paths;
 public class JSONFileReader {
 
     public String readFile(String jsonFileName) throws FileNotFoundException, UnsupportedEncodingException, IOException {
+
+        // RP! ClassLoader 경로 이용 방법 다시 찾아볼 것
         Path curPath = Paths.get("");
         String path = curPath.toAbsolutePath().toString();
-        String jsonFilePath = path + "\\file\\" + jsonFileName;
+        String jsonFilePath = path + "/src/main/resources/file/" + jsonFileName;
         System.out.println(jsonFilePath);
         File file = new File(jsonFilePath);
 
         if (file.isFile()){
-            // jsonFilePath = 파일 경로 + '/' + 파일 이름
             FileInputStream fis = new FileInputStream(file);
             InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
             BufferedReader br = new BufferedReader(isr);
