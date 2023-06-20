@@ -41,6 +41,16 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Servlet : 자바 기반의 웹 애플리케이션 프로그래밍 기술 -->
+        <!-- 버전 선택 사유 : tomcat 9.0의 표준 / 취약점이 존재하지 않고 가장 많은 다운로드를 기록함 + 이후 버전부터는 jakarta 사용 -->
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
 
     </dependencies>
 
