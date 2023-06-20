@@ -5,16 +5,16 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class JSONFileReader {
+public class JSONFileReader { // JSON 파일 읽기
 
     public String readFile(String jsonFilePath) throws FileNotFoundException, UnsupportedEncodingException, IOException {
-        // RP! ClassLoader 경로 이용 방법 다시 찾아볼 것
+        // RP! ClassLoader 경로 이용 방법 다시 찾아볼 것 (null)
 //        ClassLoader classLoader = JSONFileReader.class.getClassLoader();
-//        File file = new File(classLoader.getResource("/file/" + jsonFileName).getFile());
+//        File file = new File(classLoader.getResource(jsonFileName).getFile());
 
         File file = new File(jsonFilePath);
 
-        if (file.isFile()){
+        if (file.isFile()){ //파일이 존재하면 읽기
             FileInputStream fis = new FileInputStream(file);
             InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
             BufferedReader br = new BufferedReader(isr);
@@ -23,12 +23,12 @@ public class JSONFileReader {
             StringBuilder sb = new StringBuilder();
             String jsonFileContentLine;
 
-            while((jsonFileContentLine = br.readLine()) != null){
+            while((jsonFileContentLine = br.readLine()) != null){ // 빈 문자열이 없도록 주의(NPE)
                 sb.append(jsonFileContentLine);
             }
             br.close();
             return sb.toString();
-        } else {
+        } else { // 없을 시 처리 필요
             return null;
         }
     }

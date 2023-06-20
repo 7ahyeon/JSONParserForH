@@ -11,10 +11,10 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 public class RsrvRs { // 한화 리조트에서의 예약 관련 응답
-    @SerializedName("ds_prcsResults")
+    @SerializedName("ds_prcsResult") // 예약 신청/수정/삭제 JSON Key
     private List<RsrvInfo> rsrvInfoList1;
-    @SerializedName("ds_prcsResult")
+    @SerializedName("ds_prcsResults") // 예약 기간 조회 JSON Key
     private List<RsrvInfo> rsrvInfoList2;
-    @SerializedName("ds_roomStatus")
-    private List<RsrvRoomInfo> rsrvRoomInfoList;
+    @SerializedName("ds_roomStatus") // 예약 기간 조회 JSON Key
+    private List<RsrvPeriodInfo> rsrvPeriodInfoList;
 }

@@ -6,7 +6,7 @@ import lombok.ToString;
 // Spring : JsonInclude(JsonInclude.Include.NON_NULL) : null값 제외 처리 가능
 @ToString
 @Getter
-public class RsrvInfo {
+public class RsrvInfo { // 한화 리조트에서의 예약 정보
     @SerializedName("PROC_DS")
     private String procDs;
     @SerializedName("PROC_CD")
