@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.dto.rsrvrs;
+package com.hanhwa.jsonparser.model.dto.rsrvrs;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;

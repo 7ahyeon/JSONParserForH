@@ -2,8 +2,8 @@ package com.hanhwa.jsonparser.program;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.hanhwa.jsonparser.dto.rsrvrq.RsrvRq;
-import com.hanhwa.jsonparser.dto.rsrvrs.RsrvRs;
+import com.hanhwa.jsonparser.model.dto.rsrvrq.RsrvRq;
+import com.hanhwa.jsonparser.model.dto.rsrvrs.RsrvRs;
 
 public class ObjectBinder {
     public void bindingObject(String jsonFileContent, String jsonFileName){
