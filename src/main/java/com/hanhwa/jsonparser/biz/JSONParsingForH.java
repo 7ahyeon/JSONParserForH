@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.program;
+package com.hanhwa.jsonparser.biz;
 
 import java.io.File;
 import java.nio.file.Path;

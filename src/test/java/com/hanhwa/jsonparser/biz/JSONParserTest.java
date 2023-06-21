@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.program;
+package com.hanhwa.jsonparser.biz;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

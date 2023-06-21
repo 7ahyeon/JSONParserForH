@@ -1,9 +1,7 @@
-package com.hanhwa.jsonparser.program;
+package com.hanhwa.jsonparser.biz;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class JSONFileReader { // JSON 파일 읽기
 

@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.program;
+package com.hanhwa.jsonparser.biz;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
