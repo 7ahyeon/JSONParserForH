@@ -1,6 +1,7 @@
 package com.hanhwa.jsonparser.controller;
 
 import com.hanhwa.jsonparser.model.command.Command;
+import com.hanhwa.jsonparser.model.command.MainCommand;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,15 +28,16 @@ public class FrontController extends HttpServlet {
         Command command = null;
 
         // 메인 페이지 이동
-/*        if (com.equals("/main.do")) {
+        if (com.equals("/main.do")) {
             command = new MainCommand();
-        }*/
+        }
 
         // 커맨드 실행
         String path = command.execute(req, resp);
 
         // 무슨 의도로 작성했는지 예외처리 어떻게 할지 파악할 것
-       /* if (path == null || path.endsWith(".jsp") ) {
+
+        if (path == null || path.endsWith(".jsp") ) {
             try {
                 req.getRequestDispatcher(path).forward(req, resp);
             } catch (Exception e) {
@@ -44,7 +46,8 @@ public class FrontController extends HttpServlet {
         } else {
             PrintWriter out = resp.getWriter();
             out.print(path);
-        }*/
+            out.close();
+        }
 
     }
 
