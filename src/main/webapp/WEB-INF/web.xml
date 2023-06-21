@@ -4,8 +4,20 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <display-name>jsonparser</display-name>
-<!-- welcome-file-list : 사용자가 서버 루트 경로(/)로 접속시 불러올 파일 지정 -->
+    <!-- welcome-file-list : 사용자가 서버 루트 경로(/)로 접속시 불러올 파일 지정 -->
     <welcome-file-list>
         <welcome-file>/WEB-INF/view/index.jsp</welcome-file>
     </welcome-file-list>
+
+    <!-- error-code : 응답 상태 코드별 에러 페이지 지정 -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/error/error404.jsp</location>
+    </error-page>
+
+    <!-- exception-type : Exception 타입별 에러 페이지 지정 -->
+    <error-page>
+        <exception-type>java.io.IOException</exception-type>
+        <location>/WEB-INF/error/ioException.jsp</location>
+    </error-page>
 </web-app>
