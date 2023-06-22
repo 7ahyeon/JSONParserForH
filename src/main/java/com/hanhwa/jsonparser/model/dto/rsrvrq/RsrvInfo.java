@@ -3,6 +3,9 @@ package com.hanhwa.jsonparser.model.dto.rsrvrq;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.ToString;
+
+import java.util.Date;
+
 // Spring : JsonInclude(JsonInclude.Include.NON_NULL) : null값 제외 처리 가능
 @ToString
 @Getter
@@ -13,8 +16,9 @@ public class RsrvInfo { // 한화 리조트로의 예약 요청 정보
     private String membNo;
     @SerializedName("CUST_IDNT_NO")
     private String custIdntNo;
+    // 예약 번호
     @SerializedName("RSRV_NO")
-    private String rsrvNo;
+    private Long rsrvNo;
     @SerializedName("CONT_NO")
     private String contNo;
     @SerializedName("PAKG_NO")
@@ -28,7 +32,7 @@ public class RsrvInfo { // 한화 리조트로의 예약 요청 정보
     @SerializedName("RSRV_LOC_DIV_CD")
     private String rsrvLocDivCd;
     @SerializedName("ARRV_DATE")
-    private String arrvDate;
+    private Date arrvDate;
     @SerializedName("RSRV_ROOM_CNT")
     private String rsrvRoomCnt;
     @SerializedName("OVNT_CNT")
@@ -51,8 +55,10 @@ public class RsrvInfo { // 한화 리조트로의 예약 요청 정보
     private String rsrvCustTelNo4;
     @SerializedName("REFRESH_YN")
     private String refreshYn;
+    // 시작 날짜
     @SerializedName("STRT_DATE")
-    private String strtDate;
+    private Long strtDate;
+    // 끝 날짜
     @SerializedName("END_DATE")
-    private String endDate;
+    private Long endDate;
 }

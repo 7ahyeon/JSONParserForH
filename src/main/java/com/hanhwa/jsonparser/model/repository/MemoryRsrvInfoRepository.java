@@ -16,7 +16,7 @@ public class MemoryRsrvInfoRepository implements RsrvInfoRepository {
     private boolean duplicate;
 
     @Override
-    public long createRsrvNo() { // 예약 번호 생성
+    public Long createRsrvNo() { // 예약 번호 생성
         Random random = new Random();
         // 0일 경우 재생성
         while (randomNo == 0) {
@@ -31,7 +31,7 @@ public class MemoryRsrvInfoRepository implements RsrvInfoRepository {
     }
 
     @Override
-    public boolean checkDuplicateRsrvNo(long rsrvNo) { // 예약 번호 중복 확인
+    public boolean checkDuplicateRsrvNo(Long rsrvNo) { // 예약 번호 중복 확인
         // 저장소 예약 번호 불러오기
         for (long exRsrvNo : store.keySet()) {
             if (exRsrvNo == rsrvNo) {
@@ -46,7 +46,7 @@ public class MemoryRsrvInfoRepository implements RsrvInfoRepository {
 
     @Override
     public void saveRsrvInfo(RsrvInfo rsrvInfo) { // 예약 정보 저장
-        long rsrvNo = createRsrvNo();
+        Long rsrvNo = createRsrvNo();
         // 중복이면 재생성
         while (checkDuplicateRsrvNo(rsrvNo)) {
             rsrvNo = createRsrvNo();
