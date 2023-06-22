@@ -9,7 +9,7 @@ import java.util.Random;
 public class MemoryRsrvInfoRepository implements RsrvInfoRepository {
 
     // DB 대체 저장소 생성 (static 변수 : 프로그램이 실행되어 메모리에 올라갔을 때 딱 한 번 메모리 공간이 할당되며 모든 인스턴스가 그 값 공유함)
-    private static Map<Long, RsrvInfo> store = new HashMap<>();
+    private static Map<Long, RsrvInfo> rsrvInfostore = new HashMap<>();
 
     // 예약 번호 2300000000 시작
     private long basicNo = 2300000000L;
@@ -34,7 +34,7 @@ public class MemoryRsrvInfoRepository implements RsrvInfoRepository {
     @Override
     public boolean checkDuplicateRsrvNo(long rsrvNo) { // 예약 번호 중복 확인
         // 저장소 예약 번호 불러오기
-        for (long exRsrvNo : store.keySet()) {
+        for (long exRsrvNo : rsrvInfostore.keySet()) {
             if (exRsrvNo == rsrvNo) {
                 // 중복이면 true
                 duplicate = true;
@@ -53,11 +53,11 @@ public class MemoryRsrvInfoRepository implements RsrvInfoRepository {
             rsrvNo = createRsrvNo();
         }
         // 예약 정보 저장
-        store.put(rsrvNo, rsrvInfo);
+        rsrvInfostore.put(rsrvNo, rsrvInfo);
     }
 
     @Override
     public RsrvInfo findByNo(long rsrvNo) { // 예약 정보 조회(예약 번호로 찾기)
-        return store.get(rsrvNo);
+        return rsrvInfostore.get(rsrvNo);
     }
 }
