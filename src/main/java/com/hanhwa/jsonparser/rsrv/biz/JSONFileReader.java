@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.biz;
+package com.hanhwa.jsonparser.rsrv.biz;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

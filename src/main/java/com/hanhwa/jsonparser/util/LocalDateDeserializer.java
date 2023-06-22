@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.biz;
+package com.hanhwa.jsonparser.util;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;

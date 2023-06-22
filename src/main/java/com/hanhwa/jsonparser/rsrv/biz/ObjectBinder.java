@@ -1,9 +1,10 @@
-package com.hanhwa.jsonparser.biz;
+package com.hanhwa.jsonparser.rsrv.biz;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.hanhwa.jsonparser.model.dto.rsrvrq.RsrvRq;
-import com.hanhwa.jsonparser.model.dto.rsrvrs.RsrvRs;
+import com.hanhwa.jsonparser.rsrv.model.dto.req.RsrvRq;
+import com.hanhwa.jsonparser.rsrv.model.dto.resp.RsrvRs;
+import com.hanhwa.jsonparser.util.LocalDateDeserializer;
 
 import java.time.LocalDate;
 
