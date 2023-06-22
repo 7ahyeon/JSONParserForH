@@ -5,13 +5,17 @@ import com.google.gson.GsonBuilder;
 import com.hanhwa.jsonparser.model.dto.rsrvrq.RsrvRq;
 import com.hanhwa.jsonparser.model.dto.rsrvrs.RsrvRs;
 
+import java.time.LocalDate;
+
 public class ObjectBinder {
     public void bindingObject(String jsonFileContent, String jsonFileName){
         //.serializeNulls() .setPrettyPrinting() : toJson (직렬화 시 사용)
         // .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES) : Underscore를 CamelCase로 자동 변환 / 작동 불가 이슈
         // Object @SerializedName 설정 부여
-        Gson gson = new GsonBuilder()
-                .create();
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        // 역직렬화시 LocalDate formatting
+        gsonBuilder.registerTypeAdapter(LocalDate.class, new LocalDateDeserializer());
+        Gson gson = gsonBuilder.setPrettyPrinting().create();
 
        if (jsonFileName.endsWith(".json")) {
            jsonFileName = jsonFileName.replace(".json", "");
