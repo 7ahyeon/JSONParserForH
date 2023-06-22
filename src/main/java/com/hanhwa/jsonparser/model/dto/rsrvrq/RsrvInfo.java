@@ -16,9 +16,15 @@ public class RsrvInfo { // 한화 리조트로의 예약 요청 정보
     private String membNo;
     @SerializedName("CUST_IDNT_NO")
     private String custIdntNo;
+    // Long : 참조 타입 (Reference Type)
+    // long : 원시 타입 (Primitive Type)
+    // 원시 타입 : null 할당 불가 / 'Stack' 영역에 값 존재
+    // 참조 타입 : null 할당 가능 / 'Stack' 영역에 참조 주소 정보 존재 및 'Heap' 영역에 실제 데이터 존재
+    // 원시 타입이 참조 타입보다 값 가져오는 속도가 빠르고 메모리를 덜 사용함(not null 보장시 원시 타입 사용 권장)
+    // 원시 타입과 참조 타입 혼용은 지양하는 것이 좋다(성능 차이)
     // 예약 번호
     @SerializedName("RSRV_NO")
-    private Long rsrvNo;
+    private long rsrvNo;
     @SerializedName("CONT_NO")
     private String contNo;
     @SerializedName("PAKG_NO")
@@ -57,8 +63,8 @@ public class RsrvInfo { // 한화 리조트로의 예약 요청 정보
     private String refreshYn;
     // 시작 날짜
     @SerializedName("STRT_DATE")
-    private Long strtDate;
+    private Date strtDate;
     // 끝 날짜
     @SerializedName("END_DATE")
-    private Long endDate;
+    private Date endDate;
 }
