@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 // Spring : JsonInclude(JsonInclude.Include.NON_NULL) : null값 제외 처리 가능
 @ToString
@@ -37,8 +37,9 @@ public class RsrvInfo { // 한화 리조트로의 예약 요청 정보
     private String roomTypeCd;
     @SerializedName("RSRV_LOC_DIV_CD")
     private String rsrvLocDivCd;
+    // 예약 날짜
     @SerializedName("ARRV_DATE")
-    private Date arrvDate;
+    private LocalDate arrvDate;
     @SerializedName("RSRV_ROOM_CNT")
     private String rsrvRoomCnt;
     @SerializedName("OVNT_CNT")
@@ -61,10 +62,17 @@ public class RsrvInfo { // 한화 리조트로의 예약 요청 정보
     private String rsrvCustTelNo4;
     @SerializedName("REFRESH_YN")
     private String refreshYn;
+    // Thread safe : 여러 스레드가 어떤 객체에 접근할 때 항상 정확하게 동작함
+    // 항상 정확하게 동작함 : 개발자가 생각하는 클래스 명세에 항상 부합
+    // 클래스 명세 : 불변 조건 invariants (객체 상태 제약) / 후조건 postcondition (연산 수행 후 효과 기술)
+    // 클래스 명세를 통하여 코드 신뢰도(code confidence) 얻음
+    // race condition : 여러 스레드나 프로세스가 접근하여 조작할 때 어떤 순서로 접근하냐에 따라 실행결과 달라짐
+
+    // util.Date : 가변(mutable) / thread safe하지 못함
     // 시작 날짜
     @SerializedName("STRT_DATE")
-    private Date strtDate;
+    private LocalDate strtDate;
     // 끝 날짜
     @SerializedName("END_DATE")
-    private Date endDate;
+    private LocalDate endDate;
 }
