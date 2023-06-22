@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.rsrv.biz;
+package com.hanhwa.jsonparser.util;
 
 import java.io.IOException;
 

@@ -1,6 +1,6 @@
 package com.hanhwa.jsonparser.rsrv.request.biz;
 
-import com.hanhwa.jsonparser.rsrv.model.dto.req.RsrvInfo;
+import com.hanhwa.jsonparser.rsrv.localserver.model.dto.req.RsrvInfo;
 
 public interface RsrvRequestService {
     // 예약 번호 생성

@@ -1,6 +1,6 @@
 package com.hanhwa.jsonparser.rsrv.request.repository;
 
-import com.hanhwa.jsonparser.rsrv.model.dto.req.RsrvInfo;
+import com.hanhwa.jsonparser.rsrv.localserver.model.dto.req.RsrvInfo;
 
 import java.util.ArrayList;
 import java.util.HashMap;

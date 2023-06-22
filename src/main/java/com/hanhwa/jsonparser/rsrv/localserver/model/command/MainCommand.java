@@ -1,4 +1,4 @@
-package com.hanhwa.jsonparser.rsrv.model.command;
+package com.hanhwa.jsonparser.rsrv.localserver.model.command;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

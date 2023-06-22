@@ -1,7 +1,7 @@
 package com.hanhwa.jsonparser.rsrv.controller;
 
-import com.hanhwa.jsonparser.rsrv.model.command.Command;
-import com.hanhwa.jsonparser.rsrv.model.command.MainCommand;
+import com.hanhwa.jsonparser.rsrv.localserver.model.command.Command;
+import com.hanhwa.jsonparser.rsrv.localserver.model.command.MainCommand;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

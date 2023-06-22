@@ -1,6 +1,6 @@
 package com.hanhwa.jsonparser.rsrv.period.biz;
 
-import com.hanhwa.jsonparser.rsrv.model.dto.resp.RsrvDateInfo;
+import com.hanhwa.jsonparser.rsrv.localserver.model.dto.resp.RsrvDateInfo;
 import com.hanhwa.jsonparser.rsrv.period.repository.RsrvPeriodInfoRepository;
 
 import java.time.LocalDate;
