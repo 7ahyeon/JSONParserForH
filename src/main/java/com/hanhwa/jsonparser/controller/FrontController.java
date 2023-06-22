@@ -24,6 +24,7 @@ public class FrontController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // getServletPath : 파일명만 가져옴
         String com = req.getServletPath();
+        PrintWriter out = resp.getWriter();
 
         Command command = null;
 
@@ -35,16 +36,12 @@ public class FrontController extends HttpServlet {
         // 커맨드 실행
         String path = command.execute(req, resp);
 
-        // 무슨 의도로 작성했는지 예외처리 어떻게 할지 파악할 것
-
-        if (path == null || path.endsWith(".jsp") ) {
-            try {
-                req.getRequestDispatcher(path).forward(req, resp);
-            } catch (Exception e) {
-
-            }
+        // 커맨드 실행 실패시 메인 페이지 포워딩
+        if (path == null || path.equals("") ) {
+            // include() : 다른 자원의 수행 결과를 클라이언트로부터 요청된 Servlet 안에 포함하여 응답
+            // forward() : 다른 자원의 수행 결과가 대신 클라이언트로 응답
+            req.getRequestDispatcher("/WEB-INF/view/main.jsp").forward(req, resp);
         } else {
-            PrintWriter out = resp.getWriter();
             out.print(path);
             out.close();
         }
