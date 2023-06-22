@@ -2,9 +2,9 @@ package com.hanhwa.jsonparser.rsrv.biz;
 
 import java.io.IOException;
 
-public class JSONParser {
+public class JsonParser {
     // 구현제 의존 없도록 하기 위하여 인터페이스 생성할 예정(현재 의존 역전 원칙(DIP) 위배)
-    private static final JSONFileReader jsonFileReader = new JSONFileReader();
+    private static final JsonFileReader jsonFileReader = new JsonFileReader();
     private static final ObjectBinder objectBinder = new ObjectBinder();
 
 //    public JSONParser(JSONFileReader jsonFileReader, ObjectBinder objectBinder) {

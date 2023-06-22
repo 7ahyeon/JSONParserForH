@@ -3,7 +3,7 @@ package com.hanhwa.jsonparser.rsrv.biz;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
-public class JSONFileReader { // JSON 파일 읽기
+public class JsonFileReader { // JSON 파일 읽기
 
     public String readFile(String jsonFilePath) throws FileNotFoundException, UnsupportedEncodingException, IOException {
         // RP! ClassLoader 경로 이용 방법 다시 찾아볼 것 (null)

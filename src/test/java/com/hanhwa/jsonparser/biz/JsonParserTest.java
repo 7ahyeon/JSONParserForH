@@ -2,7 +2,7 @@ package com.hanhwa.jsonparser.biz;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class JSONParserTest {
+class JsonParserTest {
 
     @DisplayName("전체 JSON 파싱 프로그램 테스트")
     @Test

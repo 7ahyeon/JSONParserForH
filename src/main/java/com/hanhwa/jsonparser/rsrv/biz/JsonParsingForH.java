@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
-public class JSONParsingForH {
+public class JsonParsingForH {
 
     public static void jsonParsingAll() {
 
@@ -19,7 +19,7 @@ public class JSONParsingForH {
 
         for (String fileName : fileNameList) {
             System.out.println(fileName);
-            JSONParser.jsonParsing(jsonFilePath + fileName);
+            JsonParser.jsonParsing(jsonFilePath + fileName);
             System.out.println("-");
         }
     }
