@@ -3,8 +3,8 @@ package com.hanhwa.jsonparser.rsrv.hserver.model.common.biz.serialize;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.hanhwa.jsonparser.rsrv.hserver.model.request.dto.RsrvRequest;
-import com.hanhwa.jsonparser.rsrv.hserver.model.util.localdate.LocalDateDeserializer;
-import com.hanhwa.jsonparser.rsrv.hserver.model.util.localdatetime.LocalDateTimeDeserializer;
+import com.hanhwa.jsonparser.rsrv.hserver.model.util.localdate.LocalDateSerializer;
+import com.hanhwa.jsonparser.rsrv.hserver.model.util.localdatetime.LocalDateTimeSerializer;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -29,18 +29,15 @@ public class ObjectToJsonImpl implements ObjectToJson {
     @Override // 요청/응답 전문 생성
     public String parsingJson(String rsrvSelect) {
         GsonBuilder gsonBuilder = new GsonBuilder();
-        gsonBuilder.registerTypeAdapter(LocalDate.class, new LocalDateDeserializer());
-        gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeDeserializer());
+        gsonBuilder.registerTypeAdapter(LocalDate.class, new LocalDateSerializer());
+        gsonBuilder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer());
         Gson gson = gsonBuilder.serializeNulls().setPrettyPrinting().create();
         String jsonContext = null;
 
         switch (rsrvSelect) {
             case "req":
                 RsrvRequest rsrvRequest = new RsrvRequest();
-                System.out.println(rsrvRequest.toString());
                 String rsrvRequest1 = gson.toJson(rsrvRequest);
-                System.out.println("ddd");
-                System.out.println(rsrvRequest1);
                 jsonContext = rsrvRequest1;
                 break;
         }
