@@ -60,7 +60,7 @@
 </head>
 
 <body>
-    <h2>json</h2>
+    <h2>예약 서비스 선택</h2>
     <button id="getDataBtn">예약 요청</button>
     <hr>
     <table border>
