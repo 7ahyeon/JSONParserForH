@@ -1,10 +1,10 @@
 package com.hanhwa.jsonparser.rsrv;
 
-import com.hanhwa.jsonparser.rsrv.hserver.model.common.biz.AppConfig;
-import com.hanhwa.jsonparser.rsrv.hserver.model.common.biz.deserialize.JsonToObjectService;
-import com.hanhwa.jsonparser.rsrv.hserver.model.common.biz.serialize.ObjectToJsonService;
-import com.hanhwa.jsonparser.rsrv.hserver.model.request.biz.RsrvRequestService;
-import com.hanhwa.jsonparser.rsrv.hserver.model.request.dto.RsrvRequest;
+import com.hanhwa.jsonparser.rsrv.model.common.AppConfig;
+import com.hanhwa.jsonparser.rsrv.model.common.deserialize.JsonToObjectService;
+import com.hanhwa.jsonparser.rsrv.model.common.serialize.ObjectToJsonService;
+import com.hanhwa.jsonparser.rsrv.model.request.biz.RsrvRequestService;
+import com.hanhwa.jsonparser.rsrv.model.request.dto.RsrvRequest;
 
 public class Application {
     public static String application () {
