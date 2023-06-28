@@ -1,17 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+String reqs = (String)request.getParameter("request");
+%>
 <!DOCTYPE html>
 <head>
-    <title>예약 요청</title>
+<meta charset="UTF-8">
+    <title>예약 응답</title>
 
 </head>
 
 <body>
+<input type="button" value="예약 응답" onclick="location.href='receiveJson.do' ">
     <ul>
-        <c:forEach var="req" items="${request }">
-            <li>${req }</li>
-        </c:forEach>
+        <li><%=reqs %></li>
     </ul>
 </body>
 

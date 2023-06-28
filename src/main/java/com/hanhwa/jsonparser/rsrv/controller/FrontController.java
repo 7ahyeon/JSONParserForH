@@ -2,6 +2,7 @@ package com.hanhwa.jsonparser.rsrv.controller;
 
 import com.hanhwa.jsonparser.rsrv.model.command.Command;
 import com.hanhwa.jsonparser.rsrv.model.command.MainCommand;
+import com.hanhwa.jsonparser.rsrv.model.command.ReceiveJsonCommand;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -45,6 +46,8 @@ public class FrontController extends HttpServlet {
         // 메인 페이지 이동
         if (com.equals("/main.do")) {
             command = new MainCommand();
+        } else if (com.equals("/receiveJson.do")) {
+            command = new ReceiveJsonCommand();
         }
 
         // 커맨드 실행
