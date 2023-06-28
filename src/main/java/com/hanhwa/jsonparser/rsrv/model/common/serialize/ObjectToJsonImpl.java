@@ -12,18 +12,24 @@ import java.time.LocalDateTime;
 public class ObjectToJsonImpl implements ObjectToJson {
 
     @Override // 신청/조회/수정/취소/기간조회 처리 결정
-    public String selectService(String jsonFileName) {
-        String select = "fail";
-        if (jsonFileName.endsWith(".json")) {
-            jsonFileName = jsonFileName.replace(".json", "");
-            // 예약 요청
-            if (jsonFileName.endsWith("ReqRq")||jsonFileName.endsWith("ReqRs")) {
-                select = "req";
-            } else {
-                select = "fail";
-            }
+    public String selectService(int select) {
+        // 성능 차이 : if문이 3개일 때 까지는 if문이 빠르나 그 외에는  switch case문이 빠름(컴파일러 최적화시 유리함)
+        String jsonFileName = null;
+        switch(select) {
+            case 1:
+                jsonFileName = "RsrvReqRs.json";
+                break;
+            case 2:
+                jsonFileName = "RsrvModRs.json";
+                break;
+            case 3:
+                jsonFileName = "RsrvCnclRs.json";
+                break;
+            case 4:
+                jsonFileName = "RsrvCalRs.json";
+                break;
         }
-        return select;
+        return jsonFileName;
     }
 
     @Override // 요청/응답 전문 생성

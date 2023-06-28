@@ -26,7 +26,7 @@ public class Application {
 
             // 예약 응답 Json 생성
             ObjectToJsonService objectToJsonService = appConfig.objectToJsonService();
-            String rsrvReqRq = objectToJsonService.objectToJson("RsrvReqRq.json");
+            String rsrvReqRq = objectToJsonService.objectToJson(1);
             System.out.println(rsrvReqRq);
             return rsrvRequest.toString();
         }

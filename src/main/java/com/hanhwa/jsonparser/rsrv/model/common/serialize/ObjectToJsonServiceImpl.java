@@ -8,8 +8,8 @@ public class ObjectToJsonServiceImpl implements ObjectToJsonService {
     }
 
     @Override
-    public String objectToJson(String jsonFileName) {
-        String rsrvSelect = objectToJson.selectService(jsonFileName);
+    public String objectToJson(int select) {
+        String rsrvSelect = objectToJson.selectService(select);
         if (rsrvSelect != "fail") {
             String jsonContext = objectToJson.parsingJson(rsrvSelect);
             if (jsonContext != null) {
