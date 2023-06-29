@@ -1,8 +1,10 @@
 package com.hanhwa.jsonparser.rsrv.model.command;
 
+import com.hanhwa.jsonparser.rsrv.model.biz.AppConfig;
 import com.hanhwa.jsonparser.rsrv.model.biz.Application;
+import com.hanhwa.jsonparser.rsrv.model.biz.deserialize.JsonToObjectService;
+import com.hanhwa.jsonparser.rsrv.model.dto.req.RsrvRequest;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -30,6 +32,11 @@ public class ReceiveJsonCommand implements Command {
             // 요청 JSON 수신
             System.out.println("요청 JSON 수신");
             System.out.println(jsonContent);
+
+            AppConfig appConfig = new AppConfig();
+            JsonToObjectService jsonToObjectService = appConfig.jsonToObjectService();
+            RsrvRequest rsrvRequest = (RsrvRequest) jsonToObjectService.JsonToObject(jsonContent);
+            System.out.println(rsrvRequest.toString());
 
             PrintWriter out = response.getWriter();
             String sendResponse = Application.application(select);

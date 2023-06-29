@@ -18,6 +18,7 @@ String reqs = (String)request.getParameter("reqqq");
         <c:forEach var="vo" items="${reqqq }">
         <li>${vo }</li>
         </c:forEach>
+        ${reqqq }
     </ul>
 </body>
 
