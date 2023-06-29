@@ -2,6 +2,7 @@ package com.hanhwa.jsonparser.rsrv.model.command;
 
 import com.hanhwa.jsonparser.rsrv.model.biz.Application;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -29,10 +30,8 @@ public class ReceiveJsonCommand implements Command {
             // 요청 JSON 수신
             System.out.println("요청 JSON 수신");
             System.out.println(jsonContent);
-            request.setAttribute("request", jsonContent);
 
             PrintWriter out = response.getWriter();
-
             String sendResponse = Application.application(select);
 
             // POST 방식으로 JSON 전송
@@ -42,6 +41,9 @@ public class ReceiveJsonCommand implements Command {
             System.out.println(sendResponse);
             bw.flush();
             bw.close();
+
+            request.setAttribute("reqqq", jsonContent);
+
         } catch (NumberFormatException ex) {
             ex.printStackTrace();
         } catch (IOException ex) {
@@ -49,7 +51,8 @@ public class ReceiveJsonCommand implements Command {
         } catch (Exception e) {
             e.printStackTrace();
         }
-       //try catch io servlet
+
+        //try catch io servlet
         return "";
     }
 }
